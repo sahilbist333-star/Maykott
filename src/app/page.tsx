@@ -35,9 +35,10 @@ export default function HomePage() {
             <p className="text-[10px] font-bold uppercase tracking-[0.5em] text-accent-gold mb-6 animate-fade-in">
               Established Excellence
             </p>
-            <h1 className="text-6xl md:text-8xl lg:text-9xl font-black tracking-tighter leading-[0.88] uppercase mb-8 animate-slide-up">
-              Shaping the{" "}
-              <span className="text-gold-gradient">Architectural</span> Future.
+            <h1 className="text-6xl md:text-8xl lg:text-[11.5rem] font-black tracking-tighter leading-[0.85] uppercase mb-8 animate-slide-up flex flex-col">
+              <span>Shaping The</span>
+              <span className="text-gold-gradient">Architectural</span>
+              <span>Future.</span>
             </h1>
             <div className="flex flex-col sm:flex-row gap-4 mt-10">
               <Link
@@ -64,7 +65,7 @@ export default function HomePage() {
               src="https://images.unsplash.com/photo-1486325212027-8081e485255e?q=80&w=2070&auto=format&fit=crop"
               alt="Maykott Group - Modern architectural structure representing precision and scale"
               fill
-              className="object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105"
+              className="object-cover transition-all duration-1000 group-hover:scale-105"
               priority
               sizes="(max-width: 1280px) 100vw, 1280px"
             />
@@ -198,10 +199,10 @@ export default function HomePage() {
                   src={subsidiary.imageUrl}
                   alt={subsidiary.imageAlt}
                   fill
-                  className="object-cover opacity-60 group-hover:scale-105 transition-transform duration-700 grayscale"
+                  className="object-cover group-hover:scale-105 transition-transform duration-700"
                   sizes="(max-width: 768px) 100vw, 33vw"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
                 <div className="absolute bottom-0 p-10 w-full">
                   <span className="text-accent-gold text-[10px] font-bold uppercase tracking-widest mb-2 block">
                     {subsidiary.sectorLabel}
@@ -315,8 +316,14 @@ export default function HomePage() {
 
           <div className="relative w-full aspect-[2/1] bg-background-light overflow-hidden rounded-sm group titan-grid">
             {/* World Map placeholder with overlay */}
-            <div className="absolute inset-0 flex items-center justify-center opacity-20">
-              <div className="w-full h-full bg-contain bg-center bg-no-repeat opacity-30" />
+            <div className="absolute inset-0 flex items-center justify-center opacity-30">
+              <div
+                className="w-full h-full bg-contain bg-center bg-no-repeat"
+                style={{
+                  backgroundImage:
+                    "url('https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg')",
+                }}
+              />
             </div>
 
             {/* Decorative grid lines */}
@@ -389,10 +396,10 @@ export default function HomePage() {
                   src={leader.imageUrl}
                   alt={leader.imageAlt}
                   fill
-                  className="object-cover grayscale opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
+                  className="object-cover group-hover:scale-105 transition-all duration-700"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
                 <div className="absolute bottom-0 p-8 w-full">
                   <h3 className="text-white text-xl font-black uppercase tracking-tighter">
                     {leader.name}
@@ -423,11 +430,11 @@ export default function HomePage() {
       >
         {/* Watermark */}
         <div
-          className="absolute -bottom-20 -right-20 opacity-[0.03] select-none pointer-events-none"
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-[0.03] select-none pointer-events-none w-full text-center overflow-hidden flex justify-center items-center"
           aria-hidden="true"
         >
-          <span className="text-[300px] font-black leading-none uppercase tracking-tighter">
-            M
+          <span className="text-[120px] md:text-[250px] lg:text-[340px] font-black leading-none uppercase tracking-tighter whitespace-nowrap">
+            MAYKOTT
           </span>
         </div>
 
