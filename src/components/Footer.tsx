@@ -24,7 +24,7 @@ export default function Footer() {
 
   return (
     <footer className="bg-primary text-white pt-24 pb-12" role="contentinfo">
-      <div className="w-[95%] max-w-none mx-auto px-0">
+      <div className="w-[94%] max-w-none mx-auto px-0">
         {/* Main Footer Grid */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-16 mb-24">
           {/* Brand */}
@@ -48,7 +48,7 @@ export default function Footer() {
                 Maykott <span className="text-accent-gold">Group</span>
               </span>
             </Link>
-            <p className="text-white/40 max-w-sm text-sm leading-loose uppercase tracking-tighter mb-8">
+            <p className="text-white/70 max-w-sm text-sm leading-relaxed mb-8">
               Architectural rigor in global B2B expansion. We build the
               frameworks of the next industrial era.
             </p>

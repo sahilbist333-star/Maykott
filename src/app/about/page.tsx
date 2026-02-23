@@ -81,7 +81,7 @@ export default function AboutPage() {
         className="pt-16 pb-16 px-6 bg-primary"
         aria-label="About Maykott Group"
       >
-        <div className="w-[95%] max-w-none mx-auto px-0 md:px-0">
+        <div className="w-[94%] max-w-none mx-auto px-0 md:px-0">
           <span className="text-[10px] font-bold uppercase tracking-[0.5em] text-accent-gold mb-8 block">
             Established Excellence
           </span>
@@ -131,7 +131,7 @@ export default function AboutPage() {
         className="py-32 px-6 bg-white"
         aria-label="10-Year Strategic Ambition"
       >
-        <div className="w-[95%] max-w-none mx-auto px-0 md:px-0">
+        <div className="w-[94%] max-w-none mx-auto px-0 md:px-0">
           <div className="grid md:grid-cols-12 gap-16 items-center">
             <div className="md:col-span-6">
               <span className="text-[10px] font-bold uppercase tracking-[0.5em] text-accent-gold mb-6 block">
@@ -210,7 +210,7 @@ export default function AboutPage() {
         className="py-40 px-6 bg-primary border-t border-white/5"
         aria-label="The Titan Framework — Operational Philosophy"
       >
-        <div className="w-[95%] max-w-none mx-auto px-0 md:px-0">
+        <div className="w-[94%] max-w-none mx-auto px-0 md:px-0">
           <div className="text-center mb-24">
             <span className="text-[10px] font-bold uppercase tracking-[0.5em] text-accent-gold mb-4 block">
               Operational Philosophy
@@ -261,7 +261,7 @@ export default function AboutPage() {
         className="py-40 px-6 bg-off-white"
         aria-label="Company Evolution Timeline"
       >
-        <div className="w-[95%] max-w-none mx-auto px-0 md:px-0">
+        <div className="w-[94%] max-w-none mx-auto px-0 md:px-0">
           <div className="text-center mb-24">
             <h2 className="text-5xl md:text-7xl font-black uppercase tracking-tighter text-primary">
               The Evolution
@@ -332,7 +332,7 @@ export default function AboutPage() {
         id="leadership"
         aria-label="Executive Leadership Board"
       >
-        <div className="w-[95%] max-w-none mx-auto px-0 md:px-0">
+        <div className="w-[94%] max-w-none mx-auto px-0 md:px-0">
           <span className="text-[10px] font-bold uppercase tracking-widest text-accent-gold mb-4 block">
             Architects of Scale
           </span>
@@ -395,7 +395,7 @@ export default function AboutPage() {
             MAYKOTT
           </span>
         </div>
-        <div className="w-[95%] max-w-none mx-auto px-0 md:px-0 text-center relative z-10 w-full">
+        <div className="w-[94%] max-w-none mx-auto px-0 md:px-0 text-center relative z-10 w-full">
           <h2 className="text-5xl md:text-8xl font-black tracking-tighter uppercase text-black leading-[0.9] mb-16">
             LET&apos;S BUILD THE
             <br />

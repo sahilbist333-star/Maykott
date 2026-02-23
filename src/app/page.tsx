@@ -29,38 +29,30 @@ export default function HomePage() {
         className="relative flex flex-col bg-background-light overflow-hidden"
         aria-label="Hero section"
       >
-        <div className="w-[95%] max-w-none mx-auto px-0 pb-20 pt-12">
-          {/* Headline */}
-          <div className="mb-12">
-            <p className="text-[10px] font-bold uppercase tracking-[0.5em] text-accent-gold mb-6 animate-fade-in">
-              Established Excellence
-            </p>
-            <h1 className="text-6xl md:text-8xl lg:text-[11.5rem] font-black tracking-tighter leading-[0.85] uppercase mb-8 animate-slide-up flex flex-col">
-              <span>Shaping The</span>
-              <span className="text-gold-gradient">Architectural</span>
-              <span>Future.</span>
-            </h1>
-            <div className="flex flex-col sm:flex-row gap-4 mt-10">
-              <Link
-                href="/portfolio"
-                className="bg-black text-white px-10 py-5 text-xs font-bold uppercase tracking-[0.15em] hover:bg-accent-gold hover:text-white transition-all duration-300 flex items-center justify-center gap-3 group"
-              >
-                Explore Portfolio
-                <span className="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">
-                  north_east
-                </span>
-              </Link>
-              <Link
-                href="/contact"
-                className="bg-transparent border border-black text-black px-10 py-5 text-xs font-bold uppercase tracking-[0.15em] hover:bg-black hover:text-white transition-all duration-300 text-center"
-              >
-                Partner With Us
-              </Link>
+        <div className="w-[94%] max-w-none mx-auto px-0 pb-20 pt-12">
+          {/* Headline & Text */}
+          <div className="mb-12 flex flex-col lg:flex-row lg:justify-between lg:items-end gap-10">
+            <div>
+              <p className="text-[10px] font-bold uppercase tracking-[0.5em] text-accent-gold mb-6 animate-fade-in">
+                Established Excellence
+              </p>
+              <h1 className="text-6xl md:text-8xl lg:text-[11.5rem] font-black tracking-tighter leading-[0.85] uppercase animate-slide-up flex flex-col">
+                <span>Shaping The</span>
+                <span className="text-gold-gradient">Architectural</span>
+                <span>Future.</span>
+              </h1>
+            </div>
+            <div className="lg:max-w-sm xl:max-w-md pb-4 animate-fade-in">
+              <p className="text-primary/70 text-lg leading-relaxed font-medium">
+                A global B2B industrial holding company deploying capital with
+                architectural precision across infrastructure, technology,
+                energy, and logistics.
+              </p>
             </div>
           </div>
 
           {/* Hero Image */}
-          <div className="relative w-full overflow-hidden aspect-[21/9] group">
+          <div className="relative w-full overflow-hidden aspect-[21/9] group mb-8">
             <Image
               src="https://images.unsplash.com/photo-1486325212027-8081e485255e?q=80&w=2070&auto=format&fit=crop"
               alt="Maykott Group - Modern architectural structure representing precision and scale"
@@ -71,11 +63,30 @@ export default function HomePage() {
             />
             <div className="absolute inset-0 bg-gradient-to-r from-background-light/30 via-transparent to-transparent" />
           </div>
+
+          {/* Hero Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Link
+              href="/portfolio"
+              className="bg-black text-white px-10 py-5 text-xs font-bold uppercase tracking-[0.15em] hover:bg-accent-gold hover:text-white transition-all duration-300 flex items-center justify-center gap-3 group"
+            >
+              Explore Portfolio
+              <span className="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">
+                north_east
+              </span>
+            </Link>
+            <Link
+              href="/contact"
+              className="bg-transparent border border-black text-black px-10 py-5 text-xs font-bold uppercase tracking-[0.15em] hover:bg-black hover:text-white transition-all duration-300 text-center"
+            >
+              Partner With Us
+            </Link>
+          </div>
         </div>
 
         {/* Stats ticker */}
         <div className="bg-primary text-white w-full py-0">
-          <div className="w-[95%] max-w-none mx-auto px-0">
+          <div className="w-[94%] max-w-none mx-auto px-0">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-0 border-t border-white/5">
               {statsData.map((stat, i) => (
                 <div
@@ -100,7 +111,7 @@ export default function HomePage() {
         className="bg-primary text-white py-24"
         aria-label="The Maykott Standard"
       >
-        <div className="w-[95%] max-w-none mx-auto px-0">
+        <div className="w-[94%] max-w-none mx-auto px-0">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
             <div>
               <h2 className="text-accent-gold text-xs font-bold uppercase tracking-[0.4em] mb-6">
@@ -169,7 +180,7 @@ export default function HomePage() {
         className="bg-white py-24"
         aria-label="Portfolio Holdings Showcase"
       >
-        <div className="w-[95%] max-w-none mx-auto px-0">
+        <div className="w-[94%] max-w-none mx-auto px-0">
           <div className="flex justify-between items-end mb-16">
             <h2 className="text-5xl font-black uppercase tracking-tighter">
               Portfolio
@@ -247,7 +258,7 @@ export default function HomePage() {
         className="bg-background-light py-24"
         aria-label="Investment Criteria"
       >
-        <div className="w-[95%] max-w-none mx-auto px-0">
+        <div className="w-[94%] max-w-none mx-auto px-0">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-24">
             {/* Left: Criteria */}
             <div>
@@ -306,7 +317,7 @@ export default function HomePage() {
 
       {/* ═══════════════════════════ GLOBAL NETWORK ════════════════════════════════ */}
       <section className="bg-white py-24" aria-label="Global Network">
-        <div className="w-[95%] max-w-none mx-auto px-0">
+        <div className="w-[94%] max-w-none mx-auto px-0">
           <div className="text-center mb-20">
             <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter mb-4">
               Global Network
@@ -370,7 +381,7 @@ export default function HomePage() {
 
       {/* ═══════════════════════════ LEADERSHIP TEASER ═══════════════════════════════ */}
       <section className="bg-primary py-24" aria-label="Leadership Team">
-        <div className="w-[95%] max-w-none mx-auto px-0">
+        <div className="w-[94%] max-w-none mx-auto px-0">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-20 gap-8">
             <div>
               <p className="text-accent-gold text-xs font-bold uppercase tracking-[0.4em] mb-4">
@@ -438,7 +449,7 @@ export default function HomePage() {
           </span>
         </div>
 
-        <div className="w-[95%] max-w-none mx-auto px-0 text-center relative z-10">
+        <div className="w-[94%] max-w-none mx-auto px-0 text-center relative z-10">
           <h2 className="text-5xl md:text-8xl font-black uppercase tracking-tighter leading-none mb-12">
             Let&apos;s Build the Future Together.
           </h2>
