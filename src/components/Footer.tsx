@@ -24,7 +24,7 @@ export default function Footer() {
 
   return (
     <footer className="bg-primary text-white pt-24 pb-12" role="contentinfo">
-      <div className="w-[94%] max-w-none mx-auto px-0">
+      <div className="w-container max-w-none mx-auto px-0">
         {/* Main Footer Grid */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-16 mb-24">
           {/* Brand */}

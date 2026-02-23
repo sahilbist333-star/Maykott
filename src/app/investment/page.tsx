@@ -104,7 +104,7 @@ export default function InvestmentPage() {
           className="absolute inset-0 titan-grid opacity-30 pointer-events-none"
           aria-hidden="true"
         />
-        <div className="w-[94%] max-w-none mx-auto px-0 md:px-0 px-6 relative">
+        <div className="w-container max-w-none mx-auto px-0 md:px-0 px-6 relative">
           <div className="flex flex-wrap gap-2 mb-12">
             <Link
               href="/"
@@ -140,7 +140,7 @@ export default function InvestmentPage() {
         className="py-24 border-b border-primary/10 bg-neutral-50"
         aria-label="Investment Philosophy"
       >
-        <div className="w-[94%] max-w-none mx-auto px-0">
+        <div className="w-container max-w-none mx-auto px-0">
           <div className="grid lg:grid-cols-2 gap-20">
             <div>
               <span className="text-xs font-black uppercase tracking-[0.2em] text-primary/40 mb-6 block">
@@ -174,7 +174,7 @@ export default function InvestmentPage() {
         className="py-24 border-b border-primary/10"
         aria-label="Acquisition Criteria"
       >
-        <div className="w-[94%] max-w-none mx-auto px-0">
+        <div className="w-container max-w-none mx-auto px-0">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
             <div>
               <span className="text-xs font-black uppercase tracking-[0.2em] text-primary/40 mb-4 block">
@@ -226,7 +226,7 @@ export default function InvestmentPage() {
         className="py-24 border-b border-primary/10 bg-neutral-50"
         aria-label="Sector Focus Areas"
       >
-        <div className="w-[94%] max-w-none mx-auto px-0">
+        <div className="w-container max-w-none mx-auto px-0">
           <div className="text-center mb-16">
             <span className="text-xs font-black uppercase tracking-[0.2em] text-primary/40 mb-4 block">
               Investment Universe
@@ -264,7 +264,7 @@ export default function InvestmentPage() {
         className="py-24 border-b border-primary/10 overflow-hidden"
         aria-label="4-Step Investment Process"
       >
-        <div className="w-[94%] max-w-none mx-auto px-0">
+        <div className="w-container max-w-none mx-auto px-0">
           <div className="mb-20 text-center">
             <span className="text-xs font-black uppercase tracking-[0.2em] text-primary/40 mb-4 block">
               Lifecycle of an Asset

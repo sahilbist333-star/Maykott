@@ -66,7 +66,7 @@ export default function ContactPage() {
   return (
     <SiteLayout>
       <main className="pt-16 pb-20 px-6">
-        <div className="w-[94%] max-w-none mx-auto px-0 md:px-0">
+        <div className="w-container max-w-none mx-auto px-0 md:px-0">
           {/* ═══════════════════════════════════ HERO ═══════════════════════════════════ */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-24 items-end">
             <div className="lg:col-span-8">

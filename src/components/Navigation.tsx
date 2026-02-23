@@ -47,7 +47,7 @@ export default function Navigation() {
         role="navigation"
         aria-label="Main navigation"
       >
-        <div className="w-[94%] max-w-none mx-auto px-0 h-20 flex items-center justify-between">
+        <div className="w-container max-w-none mx-auto px-0 h-20 flex items-center justify-between">
           {/* Logo */}
           <Link
             href="/"
@@ -125,7 +125,7 @@ export default function Navigation() {
             className="md:hidden bg-white border-t border-primary/10 shadow-lg"
             role="menu"
           >
-            <div className="w-[94%] max-w-none mx-auto px-0 py-8 flex flex-col gap-6">
+            <div className="w-container max-w-none mx-auto px-0 py-8 flex flex-col gap-6">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}

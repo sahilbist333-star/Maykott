@@ -205,7 +205,7 @@ export default function PortfolioPage() {
         className="relative pb-20 bg-background-light pt-12"
         aria-label="Portfolio Holdings Hero"
       >
-        <div className="w-[94%] max-w-none mx-auto px-0">
+        <div className="w-container max-w-none mx-auto px-0">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
             <div className="lg:col-span-8">
               <span className="text-accent-gold text-[10px] font-black uppercase tracking-[0.4em] mb-6 block">
@@ -280,7 +280,7 @@ export default function PortfolioPage() {
 
       {/* ═══════════════════ FILTER BAR ═══════════════════ */}
       <div className="sticky top-20 z-40 bg-white/90 backdrop-blur-md border-b border-primary/5 shadow-sm">
-        <div className="w-[94%] max-w-none mx-auto px-0 md:px-0 px-6 h-20 flex items-center justify-between gap-4">
+        <div className="w-container max-w-none mx-auto px-0 md:px-0 px-6 h-20 flex items-center justify-between gap-4">
           {/* Sector Filters */}
           <div
             className="flex items-center gap-4 md:gap-8 overflow-x-auto hide-scrollbar"
@@ -345,7 +345,7 @@ export default function PortfolioPage() {
       {/* ═══════════════════ PORTFOLIO GRID ═══════════════════ */}
       <section
         id="portfolio-grid"
-        className="w-[94%] max-w-none mx-auto px-0 md:px-0 px-6 py-16"
+        className="w-container max-w-none mx-auto px-0 md:px-0 px-6 py-16"
         aria-label="Portfolio Holdings Grid"
       >
         {filteredSubsidiaries.length > 0 ? (
@@ -380,7 +380,7 @@ export default function PortfolioPage() {
 
       {/* ═══════════════════ STRATEGIC INQUIRY CTA ═══════════════════ */}
       <section className="bg-background-dark py-24 border-t border-white/5">
-        <div className="w-[94%] max-w-none mx-auto px-0">
+        <div className="w-container max-w-none mx-auto px-0">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
             <div>
               <span className="text-accent-gold text-[10px] font-black uppercase tracking-[0.4em] mb-6 block">
