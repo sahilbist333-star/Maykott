@@ -1,65 +1,433 @@
+import type { Metadata } from "next";
+import SiteLayout from "@/components/SiteLayout";
+import Link from "next/link";
 import Image from "next/image";
+import { getFeaturedSubsidiaries } from "@/data/subsidiaries";
+import { getFeaturedLeaders } from "@/data/leadership";
 
-export default function Home() {
+export const metadata: Metadata = {
+  title: "Maykott Group | Global B2B Industrial Holding Company",
+  description:
+    "A global B2B industrial holding company deploying capital with architectural precision across infrastructure, technology, energy, and logistics. Partner with Maykott Group.",
+};
+
+const statsData = [
+  { value: "$12B+", label: "Assets Under Management" },
+  { value: "48", label: "Portfolio Holdings" },
+  { value: "32", label: "Global Hubs" },
+  { value: "10+", label: "Years of Excellence" },
+];
+
+export default function HomePage() {
+  const featuredSubsidiaries = getFeaturedSubsidiaries();
+  const featuredLeaders = getFeaturedLeaders();
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+    <SiteLayout>
+      {/* ═══════════════════════════════════ HERO ═══════════════════════════════════ */}
+      <section
+        className="relative flex flex-col bg-background-light overflow-hidden"
+        aria-label="Hero section"
+      >
+        <div className="w-full max-w-7xl mx-auto px-6 pb-20 pt-12">
+          {/* Headline */}
+          <div className="mb-12">
+            <p className="text-[10px] font-bold uppercase tracking-[0.5em] text-accent-gold mb-6 animate-fade-in">
+              Established Excellence
+            </p>
+            <h1 className="text-6xl md:text-8xl lg:text-9xl font-black tracking-tighter leading-[0.88] uppercase mb-8 animate-slide-up">
+              Shaping the{" "}
+              <span className="text-gold-gradient">Architectural</span> Future.
+            </h1>
+            <div className="flex flex-col sm:flex-row gap-4 mt-10">
+              <Link
+                href="/portfolio"
+                className="bg-black text-white px-10 py-5 text-xs font-bold uppercase tracking-[0.15em] hover:bg-accent-gold hover:text-white transition-all duration-300 flex items-center justify-center gap-3 group"
+              >
+                Explore Portfolio
+                <span className="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">
+                  north_east
+                </span>
+              </Link>
+              <Link
+                href="/contact"
+                className="bg-transparent border border-black text-black px-10 py-5 text-xs font-bold uppercase tracking-[0.15em] hover:bg-black hover:text-white transition-all duration-300 text-center"
+              >
+                Partner With Us
+              </Link>
+            </div>
+          </div>
+
+          {/* Hero Image */}
+          <div className="relative w-full overflow-hidden aspect-[21/9] group">
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+              src="https://images.unsplash.com/photo-1486325212027-8081e485255e?q=80&w=2070&auto=format&fit=crop"
+              alt="Maykott Group - Modern architectural structure representing precision and scale"
+              fill
+              className="object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105"
+              priority
+              sizes="(max-width: 1280px) 100vw, 1280px"
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+            <div className="absolute inset-0 bg-gradient-to-r from-background-light/30 via-transparent to-transparent" />
+          </div>
         </div>
-      </main>
-    </div>
+
+        {/* Stats ticker */}
+        <div className="bg-primary text-white w-full py-0">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-0 border-t border-white/5">
+              {statsData.map((stat, i) => (
+                <div
+                  key={i}
+                  className="p-10 border-b md:border-b-0 border-r border-white/5 last:border-r-0"
+                >
+                  <p className="text-4xl font-black tracking-tighter text-accent-gold mb-2">
+                    {stat.value}
+                  </p>
+                  <p className="text-[10px] font-bold uppercase tracking-widest text-white/50">
+                    {stat.label}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════ VISION ═══════════════════════════════════ */}
+      <section className="bg-primary text-white py-24" aria-label="The Maykott Standard">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
+            <div>
+              <h2 className="text-accent-gold text-xs font-bold uppercase tracking-[0.4em] mb-6">
+                The Maykott Standard
+              </h2>
+              <h3 className="text-4xl md:text-6xl font-black uppercase leading-tight mb-8">
+                A 10-Year Narrative of Excellence.
+              </h3>
+              <div className="h-1 w-24 bg-accent-gold mb-12" />
+            </div>
+            <div className="space-y-8 text-white/90 text-lg leading-relaxed font-normal">
+              <p>
+                A structured ambition narrative focused on operational excellence,
+                strategic rigor, and the compounding power of global scale. We
+                define the benchmark for B2B industrial holding groups through
+                uncompromising quality and architectural precision.
+              </p>
+              <p>
+                Our methodology transcends simple capital allocation; we build the
+                frameworks that allow complex industrial ecosystems to thrive in a
+                volatile global economy.
+              </p>
+            </div>
+          </div>
+
+          {/* Three Pillars */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-0.5 mt-20 bg-white/10">
+            {[
+              {
+                num: "01",
+                title: "Strategic Rigor",
+                desc: "Deploying capital with surgical precision and long-term vision.",
+              },
+              {
+                num: "02",
+                title: "Operational Alpha",
+                desc: "Implementing industrial-grade operational frameworks across all subsidiaries.",
+              },
+              {
+                num: "03",
+                title: "Compound Growth",
+                desc: "Leveraging cross-portfolio synergies to drive exponential value creation.",
+              },
+            ].map((pillar) => (
+              <div
+                key={pillar.num}
+                className="bg-primary p-12 border-t border-white/10 group hover:bg-accent-gold/10 transition-colors"
+              >
+                <span className="text-accent-gold font-black text-4xl mb-6 block">
+                  {pillar.num}
+                </span>
+                <h4 className="text-xl font-bold uppercase mb-4">{pillar.title}</h4>
+                <p className="text-sm text-white/50 leading-loose uppercase tracking-tighter">
+                  {pillar.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════ PORTFOLIO SHOWCASE ═══════════════════════════════ */}
+      <section className="bg-white py-24" aria-label="Portfolio Holdings Showcase">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="flex justify-between items-end mb-16">
+            <h2 className="text-5xl font-black uppercase tracking-tighter">
+              Portfolio<br />Holdings
+            </h2>
+            <Link
+              href="/portfolio"
+              className="hidden md:flex items-center gap-2 text-xs font-bold uppercase tracking-widest hover:text-accent-gold transition-colors"
+            >
+              View All Holdings
+              <span className="material-symbols-outlined text-sm">north_east</span>
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {featuredSubsidiaries.map((subsidiary) => (
+              <Link
+                key={subsidiary.id}
+                href={`/portfolio#${subsidiary.id}`}
+                className="group relative aspect-[3/4] overflow-hidden bg-primary block"
+                aria-label={`${subsidiary.name} - ${subsidiary.sectorLabel}`}
+              >
+                <Image
+                  src={subsidiary.imageUrl}
+                  alt={subsidiary.imageAlt}
+                  fill
+                  className="object-cover opacity-60 group-hover:scale-105 transition-transform duration-700 grayscale"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
+                <div className="absolute bottom-0 p-10 w-full">
+                  <span className="text-accent-gold text-[10px] font-bold uppercase tracking-widest mb-2 block">
+                    {subsidiary.sectorLabel}
+                  </span>
+                  <h3 className="text-3xl font-black text-white uppercase mb-4">
+                    {subsidiary.name}
+                  </h3>
+                  <div className="text-white text-[10px] font-bold uppercase tracking-[0.2em] flex items-center gap-2 group-hover:gap-4 transition-all">
+                    View Case Study
+                    <span className="material-symbols-outlined text-sm">arrow_forward</span>
+                  </div>
+                </div>
+                <div className="absolute top-0 right-0 p-6">
+                  <div className="size-12 border border-accent-gold/30 rounded-full flex items-center justify-center">
+                    <span className="material-symbols-outlined text-accent-gold">
+                      {subsidiary.icon}
+                    </span>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+
+          <div className="mt-10 md:hidden">
+            <Link
+              href="/portfolio"
+              className="bg-black text-white px-8 py-4 text-xs font-bold uppercase tracking-[0.15em] hover:bg-accent-gold transition-all duration-300 inline-flex items-center gap-3"
+            >
+              View All Holdings
+              <span className="material-symbols-outlined text-sm">north_east</span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════ STRATEGIC RIGOR / INVESTMENT ══════════════════════ */}
+      <section className="bg-background-light py-24" aria-label="Investment Criteria">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-24">
+            {/* Left: Criteria */}
+            <div>
+              <h2 className="text-5xl font-black uppercase tracking-tighter mb-8 leading-none">
+                Strategic<br />Rigor.
+              </h2>
+              <p className="text-xl text-primary/60 mb-12">
+                We acquire and scale mid-market B2B companies that are foundational
+                to global industry.
+              </p>
+              <div className="space-y-6">
+                {[
+                  { label: "Revenue Threshold", value: "$50M – $500M" },
+                  { label: "EBITDA Margin", value: "15% – 25%" },
+                  { label: "Global Footprint", value: "Multi-Region" },
+                ].map((criterion) => (
+                  <div
+                    key={criterion.label}
+                    className="p-8 border border-primary/10 bg-white flex justify-between items-center hover:border-accent-gold transition-colors group"
+                  >
+                    <span className="text-sm font-bold uppercase tracking-widest">
+                      {criterion.label}
+                    </span>
+                    <span className="text-2xl font-black text-primary group-hover:text-accent-gold transition-colors">
+                      {criterion.value}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Right: CTA Panel */}
+            <div className="bg-primary p-12 flex flex-col justify-center">
+              <h4 className="text-accent-gold text-[10px] font-bold uppercase tracking-[0.3em] mb-6">
+                Acquisition Interest
+              </h4>
+              <p className="text-white text-3xl font-black leading-tight mb-10">
+                We are seeking partnerships in critical infrastructure, logistical
+                automation, and specialized manufacturing.
+              </p>
+              <Link
+                href="/investment"
+                className="inline-flex items-center gap-4 text-white font-bold uppercase tracking-widest text-xs hover:text-accent-gold transition-colors"
+              >
+                Review Investment Charter
+                <span className="material-symbols-outlined p-2 bg-accent-gold text-primary rounded-full text-sm">
+                  arrow_forward
+                </span>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════ GLOBAL NETWORK ════════════════════════════════ */}
+      <section className="bg-white py-24" aria-label="Global Network">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter mb-4">
+              Global Network
+            </h2>
+            <div className="w-20 h-1 bg-accent-gold mx-auto" />
+          </div>
+
+          <div className="relative w-full aspect-[2/1] bg-background-light overflow-hidden rounded-sm group titan-grid">
+            {/* World Map placeholder with overlay */}
+            <div className="absolute inset-0 flex items-center justify-center opacity-20">
+              <div className="w-full h-full bg-contain bg-center bg-no-repeat opacity-30" />
+            </div>
+
+            {/* Decorative grid lines */}
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="w-px h-full bg-primary/5 absolute left-1/4" />
+              <div className="w-px h-full bg-primary/5 absolute left-1/2" />
+              <div className="w-px h-full bg-primary/5 absolute left-3/4" />
+              <div className="h-px w-full bg-primary/5 absolute top-1/3" />
+              <div className="h-px w-full bg-primary/5 absolute top-2/3" />
+            </div>
+
+            {/* Pulse Points */}
+            {[
+              { top: "25%", left: "23%", label: "New York" },
+              { top: "22%", left: "48%", label: "London" },
+              { top: "30%", left: "58%", label: "Dubai" },
+              { top: "50%", left: "73%", label: "Singapore" },
+              { top: "28%", left: "80%", label: "Tokyo" },
+            ].map((point) => (
+              <div
+                key={point.label}
+                className="absolute group-hover:scale-125 transition-transform duration-500"
+                style={{ top: point.top, left: point.left }}
+                title={point.label}
+                aria-label={`Hub location: ${point.label}`}
+              >
+                <div className="size-4 bg-accent-gold rounded-full animate-pulse-slow absolute opacity-75" />
+                <div className="size-4 bg-accent-gold rounded-full relative border-2 border-white shadow-lg" />
+              </div>
+            ))}
+
+            {/* Info Callout */}
+            <div className="absolute bottom-10 left-10 bg-primary p-6 text-white max-w-xs shadow-2xl">
+              <h5 className="font-black uppercase text-xl mb-2">32 Hubs Worldwide</h5>
+              <p className="text-xs text-white/60 tracking-widest uppercase">
+                London • New York • Singapore • Dubai • Tokyo • Berlin
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════ LEADERSHIP TEASER ═══════════════════════════════ */}
+      <section className="bg-primary py-24" aria-label="Leadership Team">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-20 gap-8">
+            <div>
+              <p className="text-accent-gold text-xs font-bold uppercase tracking-[0.4em] mb-4">
+                Architects of Scale
+              </p>
+              <h2 className="text-white text-5xl font-black uppercase tracking-tighter">
+                Leadership Team
+              </h2>
+            </div>
+            <p className="text-white/50 max-w-sm uppercase text-xs tracking-widest leading-relaxed">
+              Our executive team brings over a century of combined experience in
+              global industrial management and private equity.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-1">
+            {featuredLeaders.map((leader) => (
+              <article
+                key={leader.id}
+                className="group relative aspect-[4/5] overflow-hidden bg-white/5"
+              >
+                <Image
+                  src={leader.imageUrl}
+                  alt={leader.imageAlt}
+                  fill
+                  className="object-cover grayscale opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80" />
+                <div className="absolute bottom-0 p-8 w-full">
+                  <h3 className="text-white text-xl font-black uppercase tracking-tighter">
+                    {leader.name}
+                  </h3>
+                  <p className="text-accent-gold text-[10px] font-bold uppercase tracking-widest">
+                    {leader.title}
+                  </p>
+                </div>
+              </article>
+            ))}
+          </div>
+
+          <div className="mt-12 text-center">
+            <Link
+              href="/about#leadership"
+              className="border border-white/20 text-white px-8 py-4 text-xs font-bold uppercase tracking-widest hover:bg-white hover:text-primary transition-all duration-300 inline-block"
+            >
+              View Full Leadership
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════ FINAL CTA ═════════════════════════════════ */}
+      <section
+        className="bg-white overflow-hidden relative py-32"
+        aria-label="Call to action"
+      >
+        {/* Watermark */}
+        <div
+          className="absolute -bottom-20 -right-20 opacity-[0.03] select-none pointer-events-none"
+          aria-hidden="true"
+        >
+          <span className="text-[300px] font-black leading-none uppercase tracking-tighter">
+            M
+          </span>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-6 text-center relative z-10">
+          <h2 className="text-5xl md:text-8xl font-black uppercase tracking-tighter leading-none mb-12">
+            Let&apos;s Build the Future Together.
+          </h2>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+            <Link
+              href="/contact"
+              className="bg-black text-white px-16 py-6 text-sm font-bold uppercase tracking-[0.15em] hover:bg-accent-gold transition-all duration-500 w-full sm:w-auto text-center"
+            >
+              Partner With Maykott
+            </Link>
+            <a
+              href="mailto:inquiry@maykott.com"
+              className="text-xs font-bold uppercase tracking-[0.15em] border-b-2 border-primary pb-1 hover:border-accent-gold hover:text-accent-gold transition-colors"
+            >
+              Direct Inquiry
+            </a>
+          </div>
+        </div>
+      </section>
+    </SiteLayout>
   );
 }
