@@ -103,9 +103,7 @@ export default function RootLayout({
                 areaServed: "Worldwide",
                 availableLanguage: "English",
               },
-              sameAs: [
-                "https://www.linkedin.com/company/maykott-group",
-              ],
+              sameAs: ["https://www.linkedin.com/company/maykott-group"],
               description:
                 "Maykott Group is a global B2B industrial holding company with a portfolio spanning enterprise technology, infrastructure, energy systems, and logistics.",
               address: {

@@ -29,7 +29,7 @@ export default function HomePage() {
         className="relative flex flex-col bg-background-light overflow-hidden"
         aria-label="Hero section"
       >
-        <div className="w-full max-w-7xl mx-auto px-6 pb-20 pt-12">
+        <div className="w-[95%] max-w-none mx-auto px-0 pb-20 pt-12">
           {/* Headline */}
           <div className="mb-12">
             <p className="text-[10px] font-bold uppercase tracking-[0.5em] text-accent-gold mb-6 animate-fade-in">
@@ -74,7 +74,7 @@ export default function HomePage() {
 
         {/* Stats ticker */}
         <div className="bg-primary text-white w-full py-0">
-          <div className="max-w-7xl mx-auto px-6">
+          <div className="w-[95%] max-w-none mx-auto px-0">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-0 border-t border-white/5">
               {statsData.map((stat, i) => (
                 <div
@@ -95,8 +95,11 @@ export default function HomePage() {
       </section>
 
       {/* ═══════════════════════════════════ VISION ═══════════════════════════════════ */}
-      <section className="bg-primary text-white py-24" aria-label="The Maykott Standard">
-        <div className="max-w-7xl mx-auto px-6">
+      <section
+        className="bg-primary text-white py-24"
+        aria-label="The Maykott Standard"
+      >
+        <div className="w-[95%] max-w-none mx-auto px-0">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
             <div>
               <h2 className="text-accent-gold text-xs font-bold uppercase tracking-[0.4em] mb-6">
@@ -109,15 +112,15 @@ export default function HomePage() {
             </div>
             <div className="space-y-8 text-white/90 text-lg leading-relaxed font-normal">
               <p>
-                A structured ambition narrative focused on operational excellence,
-                strategic rigor, and the compounding power of global scale. We
-                define the benchmark for B2B industrial holding groups through
-                uncompromising quality and architectural precision.
+                A structured ambition narrative focused on operational
+                excellence, strategic rigor, and the compounding power of global
+                scale. We define the benchmark for B2B industrial holding groups
+                through uncompromising quality and architectural precision.
               </p>
               <p>
-                Our methodology transcends simple capital allocation; we build the
-                frameworks that allow complex industrial ecosystems to thrive in a
-                volatile global economy.
+                Our methodology transcends simple capital allocation; we build
+                the frameworks that allow complex industrial ecosystems to
+                thrive in a volatile global economy.
               </p>
             </div>
           </div>
@@ -148,7 +151,9 @@ export default function HomePage() {
                 <span className="text-accent-gold font-black text-4xl mb-6 block">
                   {pillar.num}
                 </span>
-                <h4 className="text-xl font-bold uppercase mb-4">{pillar.title}</h4>
+                <h4 className="text-xl font-bold uppercase mb-4">
+                  {pillar.title}
+                </h4>
                 <p className="text-sm text-white/50 leading-loose uppercase tracking-tighter">
                   {pillar.desc}
                 </p>
@@ -159,18 +164,25 @@ export default function HomePage() {
       </section>
 
       {/* ═══════════════════════════ PORTFOLIO SHOWCASE ═══════════════════════════════ */}
-      <section className="bg-white py-24" aria-label="Portfolio Holdings Showcase">
-        <div className="max-w-7xl mx-auto px-6">
+      <section
+        className="bg-white py-24"
+        aria-label="Portfolio Holdings Showcase"
+      >
+        <div className="w-[95%] max-w-none mx-auto px-0">
           <div className="flex justify-between items-end mb-16">
             <h2 className="text-5xl font-black uppercase tracking-tighter">
-              Portfolio<br />Holdings
+              Portfolio
+              <br />
+              Holdings
             </h2>
             <Link
               href="/portfolio"
               className="hidden md:flex items-center gap-2 text-xs font-bold uppercase tracking-widest hover:text-accent-gold transition-colors"
             >
               View All Holdings
-              <span className="material-symbols-outlined text-sm">north_east</span>
+              <span className="material-symbols-outlined text-sm">
+                north_east
+              </span>
             </Link>
           </div>
 
@@ -199,7 +211,9 @@ export default function HomePage() {
                   </h3>
                   <div className="text-white text-[10px] font-bold uppercase tracking-[0.2em] flex items-center gap-2 group-hover:gap-4 transition-all">
                     View Case Study
-                    <span className="material-symbols-outlined text-sm">arrow_forward</span>
+                    <span className="material-symbols-outlined text-sm">
+                      arrow_forward
+                    </span>
                   </div>
                 </div>
                 <div className="absolute top-0 right-0 p-6">
@@ -219,24 +233,31 @@ export default function HomePage() {
               className="bg-black text-white px-8 py-4 text-xs font-bold uppercase tracking-[0.15em] hover:bg-accent-gold transition-all duration-300 inline-flex items-center gap-3"
             >
               View All Holdings
-              <span className="material-symbols-outlined text-sm">north_east</span>
+              <span className="material-symbols-outlined text-sm">
+                north_east
+              </span>
             </Link>
           </div>
         </div>
       </section>
 
       {/* ══════════════════════════ STRATEGIC RIGOR / INVESTMENT ══════════════════════ */}
-      <section className="bg-background-light py-24" aria-label="Investment Criteria">
-        <div className="max-w-7xl mx-auto px-6">
+      <section
+        className="bg-background-light py-24"
+        aria-label="Investment Criteria"
+      >
+        <div className="w-[95%] max-w-none mx-auto px-0">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-24">
             {/* Left: Criteria */}
             <div>
               <h2 className="text-5xl font-black uppercase tracking-tighter mb-8 leading-none">
-                Strategic<br />Rigor.
+                Strategic
+                <br />
+                Rigor.
               </h2>
               <p className="text-xl text-primary/60 mb-12">
-                We acquire and scale mid-market B2B companies that are foundational
-                to global industry.
+                We acquire and scale mid-market B2B companies that are
+                foundational to global industry.
               </p>
               <div className="space-y-6">
                 {[
@@ -265,8 +286,8 @@ export default function HomePage() {
                 Acquisition Interest
               </h4>
               <p className="text-white text-3xl font-black leading-tight mb-10">
-                We are seeking partnerships in critical infrastructure, logistical
-                automation, and specialized manufacturing.
+                We are seeking partnerships in critical infrastructure,
+                logistical automation, and specialized manufacturing.
               </p>
               <Link
                 href="/investment"
@@ -284,7 +305,7 @@ export default function HomePage() {
 
       {/* ═══════════════════════════ GLOBAL NETWORK ════════════════════════════════ */}
       <section className="bg-white py-24" aria-label="Global Network">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="w-[95%] max-w-none mx-auto px-0">
           <div className="text-center mb-20">
             <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter mb-4">
               Global Network
@@ -329,7 +350,9 @@ export default function HomePage() {
 
             {/* Info Callout */}
             <div className="absolute bottom-10 left-10 bg-primary p-6 text-white max-w-xs shadow-2xl">
-              <h5 className="font-black uppercase text-xl mb-2">32 Hubs Worldwide</h5>
+              <h5 className="font-black uppercase text-xl mb-2">
+                32 Hubs Worldwide
+              </h5>
               <p className="text-xs text-white/60 tracking-widest uppercase">
                 London • New York • Singapore • Dubai • Tokyo • Berlin
               </p>
@@ -340,7 +363,7 @@ export default function HomePage() {
 
       {/* ═══════════════════════════ LEADERSHIP TEASER ═══════════════════════════════ */}
       <section className="bg-primary py-24" aria-label="Leadership Team">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="w-[95%] max-w-none mx-auto px-0">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-20 gap-8">
             <div>
               <p className="text-accent-gold text-xs font-bold uppercase tracking-[0.4em] mb-4">
@@ -408,7 +431,7 @@ export default function HomePage() {
           </span>
         </div>
 
-        <div className="max-w-7xl mx-auto px-6 text-center relative z-10">
+        <div className="w-[95%] max-w-none mx-auto px-0 text-center relative z-10">
           <h2 className="text-5xl md:text-8xl font-black uppercase tracking-tighter leading-none mb-12">
             Let&apos;s Build the Future Together.
           </h2>

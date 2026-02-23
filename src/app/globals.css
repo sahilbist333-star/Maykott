@@ -2,12 +2,12 @@
 
 @theme {
   --color-primary: #121212;
-  --color-accent-gold: #C5A859;
-  --color-accent-gold-light: #E2C990;
-  --color-accent-gold-dark: #9A8039;
-  --color-background-light: #F7F7F7;
+  --color-accent-gold: #c5a859;
+  --color-accent-gold-light: #e2c990;
+  --color-accent-gold-dark: #9a8039;
+  --color-background-light: #f7f7f7;
   --color-background-dark: #191919;
-  --color-off-white: #FDFDFD;
+  --color-off-white: #fdfdfd;
 
   --font-display: "Inter", sans-serif;
 
@@ -26,7 +26,7 @@
   }
 
   body {
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
     background-color: var(--color-background-light);
     color: var(--color-primary);
   }
@@ -42,7 +42,6 @@
 }
 
 @layer utilities {
-
   /* Typography */
   .kerning-tight {
     letter-spacing: -0.05em;
@@ -59,11 +58,11 @@
 
   /* Gold gradient */
   .gold-gradient {
-    background: linear-gradient(135deg, #C5A859 0%, #9A8039 100%);
+    background: linear-gradient(135deg, #c5a859 0%, #9a8039 100%);
   }
 
   .text-gold-gradient {
-    background: linear-gradient(135deg, #C5A859 0%, #E2C990 50%, #9A8039 100%);
+    background: linear-gradient(135deg, #c5a859 0%, #e2c990 50%, #9a8039 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -71,13 +70,19 @@
 
   .gold-gradient-border {
     border: 1px solid transparent;
-    background: linear-gradient(var(--color-background-light), var(--color-background-light)) padding-box,
-      linear-gradient(to right, #C5A859, #E2C990) border-box;
+    background:
+      linear-gradient(
+          var(--color-background-light),
+          var(--color-background-light)
+        )
+        padding-box,
+      linear-gradient(to right, #c5a859, #e2c990) border-box;
   }
 
   /* Grid pattern */
   .titan-grid {
-    background-image: linear-gradient(to right, #f0f0f0 1px, transparent 1px),
+    background-image:
+      linear-gradient(to right, #f0f0f0 1px, transparent 1px),
       linear-gradient(to bottom, #f0f0f0 1px, transparent 1px);
     background-size: 48px 48px;
   }
@@ -117,7 +122,7 @@
   }
 
   .pulse-dot::before {
-    content: '';
+    content: "";
     position: absolute;
     width: 32px;
     height: 32px;
@@ -153,7 +158,6 @@
 }
 
 @keyframes ping {
-
   75%,
   100% {
     transform: translate(-50%, -50%) scale(2);
@@ -163,7 +167,7 @@
 
 /* Navigation active state styles */
 .nav-link-active {
-  border-bottom: 2px solid #C5A859;
+  border-bottom: 2px solid #c5a859;
   color: #121212;
 }
 
